@@ -50,10 +50,10 @@ function projectCallback(projectObject) {
 function randomizeColors(e) {
 	e.preventDefault();
 	console.log("User clicked on color button");
-	$.get("/palette/", randomColor);
+	$.get("/palette/", changeColor);
 }
 
-function randomColor(result) {
+function changeColor(result) {
 	var hex = result['colors'];
 	var colors = hex['hex'];
 	$('body').css('background-color', colors[0]);
